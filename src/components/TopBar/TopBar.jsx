@@ -180,7 +180,16 @@ function TopBar({ theme, toggleTheme, handleDrawerToggle }) {
                                     </a>
                                 </li>
                                 <li className="buy-token">
-                                    <a className="readon black-shape" href="/faucet" style={{marginTop: '7px'}}>
+                                    <a className="readon black-shape" href="/nftairdrop" style={{marginTop: '7px'}}>
+                                        <span className="btn-text">NFT airdrop </span>
+                                        <i className="icon-arrow_down"></i>
+                                        <span className="hover-shape1"></span>
+                                        <span className="hover-shape2"></span>
+                                        <span className="hover-shape3"></span>
+                                    </a>
+                                </li>
+                                <li className="buy-token">
+                                    <a className="readon black-shape" href="/faucet" style={{marginTop: '7px', marginLeft:"5px"}}>
                                         <span className="btn-text">Get Tokens </span>
                                         <i className="icon-arrow_down"></i>
                                         <span className="hover-shape1"></span>
