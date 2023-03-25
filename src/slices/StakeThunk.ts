@@ -19,7 +19,6 @@ interface IUAData {
   type: string | null;
 }
 
-
 export const claimFaucet = createAsyncThunk(
   "stake/claimFaucet",
   async ({ provider, address, networkID }: IFaucetAsyncThunk, { dispatch }) => {
