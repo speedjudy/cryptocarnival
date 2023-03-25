@@ -57,20 +57,6 @@ function Faucet() {
         <div className="container">
           <div className="banner-content v3_banner_content">
             <div className="row">
-              <div
-                className={isDesktop ? "col-md-6" : "col-md-12"}
-                style={{ display: "flex", justifyContent: "flex-end" }}
-              >
-                <img
-                  src={crowImage}
-                  alt="crowImage"
-                  style={{
-                    height: isDesktop ? "60vh" : "auto",
-                    width: isDesktop ? "auto" : "90vw",
-                    display: "none",
-                  }}
-                />
-              </div>
               <div className={isDesktop ? "col-md-6" : "col-md-12"}>
                 <div className="sc_banner_v3_left">
                   <div className="container">
@@ -100,13 +86,15 @@ function Faucet() {
                           token from this address:{" "}
                           <a href="https://snowtrace.io/address/0xe52c7545F670c2d7723A5A306c0111829201ED10">
                             {isDesktop
-                              ? address
-                              : makeShortWalletAddress(address)}
+                              ? "0xe52c7545f670c2d7723a5a306c0111829201ed10"
+                              : makeShortWalletAddress(
+                                  "0xe52c7545f670c2d7723a5a306c0111829201ed10"
+                                )}
                           </a>
                           .
                         </p>
                       </div>
-                      <h4>Sorry, faucet not working on mobile ¯\_(ツ)_/¯</h4>
+                      {/* <h4>Sorry, faucet not working on mobile ¯\_(ツ)_/¯</h4> */}
                       <div
                         style={{
                           display: "flex",

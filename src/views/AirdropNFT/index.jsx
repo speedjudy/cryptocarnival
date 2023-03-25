@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
+import { useMediaQuery } from "usehooks-ts";
 
 import image1 from "../../assets/images/homeV3/joker.png";
 import image2 from "../../assets/images/icons/steps.png";
@@ -18,17 +19,30 @@ import image15 from "../../assets/images/icons/munis.svg";
 import image16 from "../../assets/images/icons/steps2.png";
 import image17 from "../../assets/images/icons/galaxy_image.png";
 import image18 from "../../assets/images/logo.png";
+import crowImage from "../../assets/Crow.jpg";
+
 import { useWeb3Context } from "../../hooks";
 
-import { claimFaucet } from "../../slices/StakeThunk";
+import { claimNFT } from "../../slices/StakeThunk";
 
 import "./temp.scss";
 
 function Faucet() {
   const dispatch = useDispatch();
+  const isDesktop = useMediaQuery("(min-width: 768px)");
 
   const onClaimFaucet = async () => {
-    await dispatch(claimFaucet({ address, provider, networkID: chainID }));
+    await dispatch(claimNFT({ address, provider, networkID: chainID }));
+  };
+
+  const makeShortWalletAddress = (addr) => {
+    if (addr && addr !== "" && addr.includes("0x")) {
+      return (
+        addr.substring(0, 6) +
+        "..." +
+        addr.substring(addr.length - 4, addr.length)
+      );
+    } else return "";
   };
 
   const { connect, address, provider, chainID, connected, hasCachedProvider } =
@@ -42,49 +56,72 @@ function Faucet() {
       <div id="sc-banner" className="sc_banner_v3 banner-bg position-relative">
         <div className="container">
           <div className="banner-content v3_banner_content">
-            <div
-              className="row center"
-              style={{ display: "flex", justifyContent: "center" }}
-            >
-              <div className="col-md-8">
+            <div className="row">
+              <div
+                className={isDesktop ? "col-md-6" : "col-md-12"}
+                style={{ display: "flex", justifyContent: "flex-end" }}
+              >
+                <img
+                  src={crowImage}
+                  alt="crowImage"
+                  style={{
+                    height: isDesktop ? "60vh" : "auto",
+                    width: isDesktop ? "auto" : "90vw",
+                    display: "none",
+                  }}
+                />
+              </div>
+              <div className={isDesktop ? "col-md-6" : "col-md-12"}>
                 <div className="sc_banner_v3_left">
                   <div className="container">
                     <div className="footer-cta-area text-center active-shape hover-shape-inner">
                       <div
-                        style={{ display: "flex", justifyContent: "center" }}
+                        style={{
+                          display: "flex",
+                          justifyContent: "center",
+                          flexDirection: "column",
+                          alignItems: "center",
+                        }}
                       >
-                        <h2
-                          className="title"
-                          style={{
-                            textAlign: "center",
-                            display: "flex",
-                            justifyContent: "center",
-                          }}
-                        >
-                          CryptoCarnival
+                        <h2 className="title mb-15">
+                          AIRDROP OF
                           <br />
-                          Free NFT
+                          NFTS
                         </h2>
-                      </div>
-                      <div
-                        style={{ display: "flex", justifyContent: "center" }}
-                      >
-                        <p className="dsc mb-40">
-                          Miniting contract <br></br>
-                          <a
-                            href="https://snowtrace.io/address/0xe52c7545f670c2d7723a5a306c0111829201ed10#code"
-                            style={{ cursor: "pointer" }}
-                            target="_blank"
-                          >
-                            0xe52c7545f670c2d7723a5a306c0111829201ed10
+                        <p
+                          className="dsc mb-40 "
+                          style={{ paddingLeft: "10px", paddingRight: "10px" }}
+                        >
+                          Drops are limited to 1 token per 24 hours. You must{" "}
+                          <a href="https://support.avax.network/en/articles/4626956-how-do-i-set-up-metamask-on-avalanche">
+                            switch
+                          </a>{" "}
+                          to the Avalanche network in your wallet and import our
+                          token from this address:{" "}
+                          <a href="https://snowtrace.io/address/0x6a35af37ed1be39431ec45606c67957e6bb364be">
+                            {isDesktop
+                              ? "0x6a35af37ed1be39431ec45606c67957e6bb364be"
+                              : makeShortWalletAddress(
+                                  "0x6a35af37ed1be39431ec45606c67957e6bb364be"
+                                )}
                           </a>
+                          .
                         </p>
                       </div>
+                      {/* <h4>Sorry, faucet not working on mobile ¯\_(ツ)_/¯</h4> */}
                       <div
-                        style={{ display: "flex", justifyContent: "center" }}
+                        style={{
+                          display: "flex",
+                          justifyContent: "center",
+                          flexDirection: "column",
+                          alignItems: "center",
+                        }}
                       >
                         <p className="dsc mb-40">
-                          Your wallet address: {address}
+                          Your wallet address:{" "}
+                          {isDesktop
+                            ? address
+                            : makeShortWalletAddress(address)}
                         </p>
                       </div>
                       <a

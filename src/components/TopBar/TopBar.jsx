@@ -326,6 +326,19 @@ function TopBar({ theme, toggleTheme, handleDrawerToggle }) {
                     <li className="buy-token">
                       <a
                         className="readon black-shape"
+                        href="/nftairdrop"
+                        style={{ marginTop: "7px", marginLeft: "5px" }}
+                      >
+                        <span className="btn-text">Get NFT airdrop </span>
+                        <i className="icon-arrow_down"></i>
+                        <span className="hover-shape1"></span>
+                        <span className="hover-shape2"></span>
+                        <span className="hover-shape3"></span>
+                      </a>
+                    </li>
+                    <li className="buy-token">
+                      <a
+                        className="readon black-shape"
                         href="/faucet"
                         style={{ marginTop: "7px", marginLeft: "5px" }}
                       >
@@ -561,6 +574,11 @@ function TopBar({ theme, toggleTheme, handleDrawerToggle }) {
                   Meta
                 </a>
                 <ul className="sub-menu" style={{ display: "none" }}>
+                  <li className="hash-has-sub">
+                    <a href="/nftairdrop" className="hash">
+                      Get NFT airdrop
+                    </a>
+                  </li>
                   <li className="hash-has-sub">
                     <a href="/faucet" className="hash">
                       Get Tokens
