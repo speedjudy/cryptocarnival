@@ -2,6 +2,7 @@ import { ethers } from "ethers";
 import { addresses } from "../constants";
 import { abi as ierc20Abi } from "../abi/IERC20.json";
 import { abi as faucetAbi } from "../abi/Faucet.json";
+import nftAirdropAbi from "../abi/airdropNFTContract.json";
 import { abi as OlympusStaking } from "../abi/OlympusStakingv2.json";
 import { abi as StakingHelper } from "../abi/StakingHelper.json";
 import { clearPendingTxn, fetchPendingTxns, getStakingTypeText } from "./PendingTxnsSlice";
@@ -11,6 +12,7 @@ import { error } from "../slices/MessagesSlice";
 import { IActionValueAsyncThunk, IChangeApprovalAsyncThunk, IJsonRPCError, IFaucetAsyncThunk } from "./interfaces";
 import { segmentUA } from "../helpers/userAnalyticHelpers";
 import { loadAccountDetails } from "./AccountSlice";
+import { parseMetamaskErrorMessage } from "src/helpers";
 interface IUAData {
   address: string;
   value: string;
@@ -19,6 +21,45 @@ interface IUAData {
   type: string | null;
 }
 
+
+export const claimNFT = createAsyncThunk(
+  "stake/claimFaucet",
+  async ({ provider, address, networkID }: IFaucetAsyncThunk, { dispatch }) => {
+    if (!address) {
+      dispatch(error("Please connect your wallet!"));
+      return;
+    }
+
+    const signer = provider.getSigner();
+    const faucetContract = new ethers.Contract(addresses[networkID].NFT_AIRDROP_ADDRESS as string, nftAirdropAbi, signer);
+    let requestTokensTx;
+    try {
+
+      requestTokensTx = await faucetContract.mint();
+      const pendingTxnType = "claming";
+      const text = "text";
+      dispatch(fetchPendingTxns({ txnHash: requestTokensTx.hash, text, type: pendingTxnType }));
+      await requestTokensTx.wait();
+      window.alert("Cngratulations! You've got an NFT.");
+    } catch (e: unknown) {
+      const errorMessage = parseMetamaskErrorMessage(e);
+      window.alert(errorMessage);
+      dispatch(()=>{
+        
+        console.log((e as IJsonRPCError).message.search("user rejected transaction"));
+        if ((e as IJsonRPCError).message=="Internal JSON-RPC error.") {
+          window.alert("You have already received your daily tokens");
+        } if ((e as IJsonRPCError).message.search("user rejected transaction")>-1) {
+        } 
+      });
+      return;
+    } finally {
+      if (requestTokensTx) {
+        dispatch(clearPendingTxn(requestTokensTx.hash));
+      }
+    }
+  },
+);
 
 export const claimFaucet = createAsyncThunk(
   "stake/claimFaucet",
@@ -40,9 +81,11 @@ export const claimFaucet = createAsyncThunk(
       await requestTokensTx.wait();
     } catch (e: unknown) {
 
+      const errorMessage = parseMetamaskErrorMessage(e);
+      console.log( errorMessage);
+
       dispatch(()=>{
         
-        console.log((e as IJsonRPCError).message, 23132132131)
         console.log((e as IJsonRPCError).message.search("user rejected transaction"));
         if ((e as IJsonRPCError).message=="Internal JSON-RPC error.") {
           window.alert("You have already received your daily tokens");
@@ -91,6 +134,9 @@ export const changeApproval = createAsyncThunk(
 
       await approveTx.wait();
     } catch (e: unknown) {
+      
+      const errorMessage = parseMetamaskErrorMessage(e);
+      console.log( errorMessage);
       dispatch(error((e as IJsonRPCError).message));
       return;
     } finally {
@@ -150,6 +196,9 @@ export const changeStake = createAsyncThunk(
       await stakeTx.wait();
       dispatch(loadAccountDetails({ networkID, address, provider }));
     } catch (e: unknown) {
+      
+      const errorMessage = parseMetamaskErrorMessage(e);
+      console.log( errorMessage);
       uaData.approved = false;
       const rpcError = e as IJsonRPCError;
       if (rpcError.code === -32603 && rpcError.message.indexOf("ds-math-sub-underflow") >= 0) {

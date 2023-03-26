@@ -23,16 +23,17 @@ import crowImage from "../../assets/Crow.jpg";
 
 import { useWeb3Context } from "../../hooks";
 
-import { claimFaucet } from "../../slices/StakeThunk";
+import { claimNFT } from "../../slices/StakeThunk";
 
 import "./temp.scss";
+import PageLoaderCircle from "src/components/PageLoaderCircle";
 
 function Faucet() {
   const dispatch = useDispatch();
   const isDesktop = useMediaQuery("(min-width: 768px)");
 
   const onClaimFaucet = async () => {
-    await dispatch(claimFaucet({ address, provider, networkID: chainID }));
+    await dispatch(claimNFT({ address, provider, networkID: chainID }));
   };
 
   const makeShortWalletAddress = (addr) => {
@@ -55,6 +56,19 @@ function Faucet() {
         <div className="container">
           <div className="banner-content v3_banner_content">
             <div className="row">
+              <div
+                className={isDesktop ? "col-md-6" : "col-md-12"}
+                style={{ display: "flex", justifyContent: "flex-end" }}
+              >
+                <img
+                  src={crowImage}
+                  alt="crowImage"
+                  style={{
+                    height: isDesktop ? "60vh" : "auto",
+                    width: isDesktop ? "auto" : "90vw",
+                  }}
+                />
+              </div>
               <div className={isDesktop ? "col-md-6" : "col-md-12"}>
                 <div className="sc_banner_v3_left">
                   <div className="container">
@@ -68,25 +82,25 @@ function Faucet() {
                         }}
                       >
                         <h2 className="title mb-15">
-                          CCWTF
+                          AIRDROP OF
                           <br />
-                          Free Faucet
+                          NFTS
                         </h2>
                         <p
                           className="dsc mb-40 "
                           style={{ paddingLeft: "10px", paddingRight: "10px" }}
                         >
-                          Drops are limited to 10 tokens per 24 hours. You must{" "}
+                          Drops are limited to 1 token per 24 hours. You must{" "}
                           <a href="https://support.avax.network/en/articles/4626956-how-do-i-set-up-metamask-on-avalanche">
                             switch
                           </a>{" "}
                           to the Avalanche network in your wallet and import our
                           token from this address:{" "}
-                          <a href="https://snowtrace.io/address/0xe52c7545F670c2d7723A5A306c0111829201ED10">
+                          <a href="https://snowtrace.io/address/0x6a35af37ed1be39431ec45606c67957e6bb364be">
                             {isDesktop
-                              ? "0xe52c7545f670c2d7723a5a306c0111829201ed10"
+                              ? "0x6a35af37ed1be39431ec45606c67957e6bb364be"
                               : makeShortWalletAddress(
-                                  "0xe52c7545f670c2d7723a5a306c0111829201ed10"
+                                  "0x6a35af37ed1be39431ec45606c67957e6bb364be"
                                 )}
                           </a>
                           .
@@ -115,7 +129,7 @@ function Faucet() {
                         href="#"
                         onClick={onClaimFaucet}
                       >
-                        <span>REQUEST 10 CCWTF</span>
+                        <span>REQUEST AN NFT</span>
                         <div className="hover-shape1"></div>
                         <div className="hover-shape2"></div>
                         <div className="hover-shape3"></div>

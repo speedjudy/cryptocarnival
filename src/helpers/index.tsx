@@ -13,6 +13,33 @@ import { ohm_busd } from "./AllBonds";
 import { JsonRpcSigner, StaticJsonRpcProvider } from "@ethersproject/providers";
 import { IBaseAsyncThunk } from "src/slices/interfaces";
 
+export const parseMetamaskErrorMessage = (error: any) => {
+  let message = 'An error occurred';
+
+  if (error) {
+     if (error.data && error.data.message) {
+      message = error.data.message;
+    }
+    else if (error.message) {
+      message = error.message;
+    }
+    if(message.toString().includes("execution reverted:") === true)
+    {
+      try{
+      let startindex = message.toString().indexOf("execution reverted:");
+      if(startindex > 0)
+      {
+        message = message.substring(startindex+20, message.length);
+        let indexOfRightBrace = message.toString().indexOf(`\"`);
+        message = message.substring(0, indexOfRightBrace);
+      }
+    }catch(error){}
+    }
+  }
+
+  return message;
+}
+
 // NOTE (appleseed): this looks like an outdated method... we now have this data in the graph (used elsewhere in the app)
 export async function getMarketPrice({ networkID, provider }: IBaseAsyncThunk) {
   const ohm_busd_address = ohm_busd.getAddressForReserve(networkID);

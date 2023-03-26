@@ -205,6 +205,8 @@ export interface IUserBondDetails {
 export const calculateUserBondDetails = createAsyncThunk(
   "account/calculateUserBondDetails",
   async ({ address, bond, networkID, provider }: ICalcUserBondDetailsAsyncThunk) => {
+    
+    try{
     if (!address) {
       return {
         bond: "",
@@ -226,15 +228,15 @@ export const calculateUserBondDetails = createAsyncThunk(
 
     let interestDue, pendingPayout, bondMaturationBlock;
 
-    const bondDetails = await bondContract.bondInfo(address);
-    interestDue = bondDetails.payout / Math.pow(10, 9);
-    bondMaturationBlock = +bondDetails.vesting + +bondDetails.lastBlock;
-    pendingPayout = await bondContract.pendingPayoutFor(address);
+    const bondDetails = await bondContract?.bondInfo(address) || null;
+    interestDue = (bondDetails?.payout || 0) / Math.pow(10, 9);
+    bondMaturationBlock = +(bondDetails?.vesting || 0) + (bondDetails?.lastBlock || 0);
+    pendingPayout = await bondContract?.pendingPayoutFor(address) || 0;
 
     let allowance,
     balance = 0;
-    allowance = await reserveContract.allowance(address, bond.getAddressForBond(networkID));
-    balance = await reserveContract.balanceOf(address);
+    allowance = await reserveContract?.allowance(address, bond.getAddressForBond(networkID)) || 0;
+    balance = await reserveContract?.balanceOf(address) || 0;
     // formatEthers takes BigNumber => String
     const balanceVal = ethers.utils.formatEther(balance);
     // balanceVal should NOT be converted to a number. it loses decimal precision
@@ -249,6 +251,19 @@ export const calculateUserBondDetails = createAsyncThunk(
       bondMaturationBlock,
       pendingPayout: ethers.utils.formatUnits(pendingPayout, "gwei"),
     };
+  }catch(error){
+    return {
+        bond: "",
+        displayName: "",
+        bondIconSvg: "",
+        isLP: false,
+        allowance: 0,
+        balance: "0",
+        interestDue: 0,
+        bondMaturationBlock: 0,
+        pendingPayout: "",
+      };
+  }
   },
 );
 
@@ -287,7 +302,7 @@ const accountSlice = createSlice({
       })
       .addCase(loadAccountDetails.rejected, (state, { error }) => {
         state.loading = false;
-        console.log(error);
+        // console.log(error);
       })
       .addCase(getBalances.pending, state => {
         state.loading = true;
@@ -311,7 +326,7 @@ const accountSlice = createSlice({
       })
       .addCase(calculateUserBondDetails.rejected, (state, { error }) => {
         state.loading = false;
-        console.log(error);
+        // console.log(error);
       });
   },
 });

@@ -18,111 +18,114 @@ import image17 from "../../assets/images/icons/galaxy_image.png";
 import image18 from "../../assets/images/logo.png";
 
 import "./temp.scss";
+import PageLoaderCircle from "src/components/PageLoaderCircle";
 
 function nabben() {
-    return (
-        <div>
-            <div className="loader_first">
-                <div className="circular-spinner"></div>
+  return (
+    <div>
+      <PageLoaderCircle delay={5000} />
+      <div id="mainContent" className="position-relative">
+        <div className="container">Text goes here.</div>
+      </div>
+
+      <div className="gamfi-footer-section">
+        <div className="footer-area">
+          <div className="container">
+            <div className="sec-heading text-center">
+              <div className="sub-inner mb-52">
+                <img
+                  className="heading-right-image"
+                  src={image16}
+                  alt="Steps-Image"
+                />
+                <span id="shareSocial" className="sub-title white-color">
+                  Share on Social
+                </span>
+                <img
+                  className="heading-left-image"
+                  src={image2}
+                  alt="Steps-Image"
+                />
+              </div>
             </div>
-
-
-
-            <div id="mainContent" className="position-relative">
-                <div className="container">
-                    Text goes here.
-                </div>
-
+            <div className="footer-listing text-center mb-100 md-mb-70">
+              <ul className="footer-icon-list">
+                <li>
+                  <a href="https://twitter.com/intent/tweet?text=Read%20crypto%20essays%20and%20play%20games%20on%20cryptocarnival.wtf">
+                    <i className="icon-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://t.me/cryptocarnivalz">
+                    <i className="icon-telegram"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://mail.google.com/mail/u/0/?view=cm&to&su=Read%20crypto%20essays%20and%20play%20games%20on%20cryptocarnival.wtf&body=https%3A%2F%2Fcryptocarnival.wtf%0A&bcc&cc&fs=1&tf=1">
+                    <i className="icon-medium"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/sharing/share-offsite/?url=cryptocarnival.wtf">
+                    <i className="icon-linkedin"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i className="icon-instagram"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/sharer/sharer.php?u=cryptocarnival.wtf&quote=Read%20crypto%20essays%20and%20play%20games%20on%20cryptocarnival.wtf">
+                    <i className="icon-facebook"></i>
+                  </a>
+                </li>
+              </ul>
             </div>
-
-
-
-
-            <div className="gamfi-footer-section">
-                <div className="footer-area">
-                    <div className="container">
-                        <div className="sec-heading text-center">
-                            <div className="sub-inner mb-52">
-                                <img className="heading-right-image" src={image16} alt="Steps-Image" />
-                                <span id="shareSocial" className="sub-title white-color">Share on Social</span>
-                                <img className="heading-left-image" src={image2} alt="Steps-Image" />
-                            </div>
-                        </div>
-                        <div className="footer-listing text-center mb-100 md-mb-70">
-                            <ul className="footer-icon-list">
-                                <li>
-                                    <a href="https://twitter.com/intent/tweet?text=Read%20crypto%20essays%20and%20play%20games%20on%20cryptocarnival.wtf">
-                                        <i className="icon-twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://t.me/cryptocarnivalz">
-                                        <i className="icon-telegram"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://mail.google.com/mail/u/0/?view=cm&to&su=Read%20crypto%20essays%20and%20play%20games%20on%20cryptocarnival.wtf&body=https%3A%2F%2Fcryptocarnival.wtf%0A&bcc&cc&fs=1&tf=1">
-                                        <i className="icon-medium"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=cryptocarnival.wtf">
-                                        <i className="icon-linkedin"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i className="icon-instagram"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.facebook.com/sharer/sharer.php?u=cryptocarnival.wtf&quote=Read%20crypto%20essays%20and%20play%20games%20on%20cryptocarnival.wtf">
-                                        <i className="icon-facebook"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div className="footer-logo text-center mb-45">
-                            <a href="/index">
-                                <img src={image18} alt="Footer-logo" />
-                            </a>
-                        </div>
-                        <div className="footer-mainmenu text-center mb-20">
-                            <ul>
-                                <li>
-                                    <a href="/index#Whatiscryptocarnival">How it works</a>
-                                </li>
-                                <li>
-                                    <a href="/essays">Read essays</a>
-                                </li>
-                                <li>
-                                    <a href="/dice">Play games</a>
-                                </li>
-                                <li>
-                                    <a href="/faucet">Receive tokens</a>
-                                </li>
-                                <li>
-                                    <a href="/NFT">Receive NFT</a>
-                                </li>
-                                <li>
-                                    <a href="/about">About</a>
-                                </li>
-                                <li>
-                                    <a href="/about#contact">Contact</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div className="copyright-area text-center mb-0">
-                            <p className="dsc mb-37">
-                                Copyright © 2022. All Rights Reserved by
-                                <a target="_blank" className="gafi" href="#"> the Authors</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
+            <div className="footer-logo text-center mb-45">
+              <a href="/index">
+                <img src={image18} alt="Footer-logo" />
+              </a>
             </div>
+            <div className="footer-mainmenu text-center mb-20">
+              <ul>
+                <li>
+                  <a href="/index#Whatiscryptocarnival">How it works</a>
+                </li>
+                <li>
+                  <a href="/essays">Read essays</a>
+                </li>
+                <li>
+                  <a href="/dice">Play games</a>
+                </li>
+                <li>
+                  <a href="/faucet">Receive tokens</a>
+                </li>
+                <li>
+                  <a href="/NFT">Receive NFT</a>
+                </li>
+                <li>
+                  <a href="/about">About</a>
+                </li>
+                <li>
+                  <a href="/about#contact">Contact</a>
+                </li>
+              </ul>
+            </div>
+            <div className="copyright-area text-center mb-0">
+              <p className="dsc mb-37">
+                Copyright © 2022. All Rights Reserved by
+                <a target="_blank" className="gafi" href="#">
+                  {" "}
+                  the Authors
+                </a>
+              </p>
+            </div>
+          </div>
         </div>
-    )
+      </div>
+    </div>
+  );
 }
 
 export default nabben;
