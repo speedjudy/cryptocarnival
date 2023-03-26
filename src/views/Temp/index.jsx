@@ -18,6 +18,7 @@ import image17 from "../../assets/images/icons/galaxy_image.png";
 import image18 from "../../assets/images/logo.png";
 import React, { useState, useRef } from "react";
 import "./temp.scss";
+import PageLoaderCircle from "src/components/PageLoaderCircle";
 
 function Temp() {
   const [city, setCity] = useState("On_going");
@@ -27,9 +28,7 @@ function Temp() {
   // console.log(city);
   return (
     <div>
-      {/* <div className="loader_first">
-        <div className="circular-spinner"></div>
-      </div> */}
+      <PageLoaderCircle delay={5000} />
 
       <div id="sc-banner" className="sc_banner_v3 banner-bg position-relative">
         <div className="container">

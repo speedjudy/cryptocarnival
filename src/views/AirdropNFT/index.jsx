@@ -26,6 +26,7 @@ import { useWeb3Context } from "../../hooks";
 import { claimNFT } from "../../slices/StakeThunk";
 
 import "./temp.scss";
+import PageLoaderCircle from "src/components/PageLoaderCircle";
 
 function Faucet() {
   const dispatch = useDispatch();
@@ -49,9 +50,7 @@ function Faucet() {
     useWeb3Context();
   return (
     <div>
-      <div className="loader_first">
-        <div className="circular-spinner"></div>
-      </div>
+      <PageLoaderCircle delay={5000} />
 
       <div id="sc-banner" className="sc_banner_v3 banner-bg position-relative">
         <div className="container">
