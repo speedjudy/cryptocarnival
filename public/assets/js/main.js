@@ -52,15 +52,7 @@
       fixedContentPos: false,
     });
   }
-  
-  //window load
-  $(window).on( 'load', function() {
-    $(".loader_first").delay(500).fadeOut(300);
-    $(".circular-spinner").on( 'click', function() {
-      $(".loader_first").fadeOut(300);
-    })
-  })  
-  
+    
   /*-------------------------------------
   OwlCarousel
   -------------------------------------*/
