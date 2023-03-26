@@ -43,7 +43,6 @@ export const claimNFT = createAsyncThunk(
       window.alert("Cngratulations! You've got an NFT.");
     } catch (e: unknown) {
       const errorMessage = parseMetamaskErrorMessage(e);
-      console.log( errorMessage);
       window.alert(errorMessage);
       dispatch(()=>{
         
