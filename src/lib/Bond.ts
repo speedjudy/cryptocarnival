@@ -65,11 +65,16 @@ export abstract class Bond {
   }
 
   getAddressForBond(networkID: NetworkID) {
-    return this.networkAddrs[networkID].bondAddress;
+    return this.networkAddrs[networkID]?.bondAddress || "";
   }
   getContractForBond(networkID: NetworkID, provider: StaticJsonRpcProvider | JsonRpcSigner) {
     const bondAddress = this.getAddressForBond(networkID);
-    return new ethers.Contract(bondAddress, this.bondContractABI, provider);
+    try{
+      let bondContract = new ethers.Contract(bondAddress, this.bondContractABI, provider);
+      return bondContract;
+    }catch(error){
+      return null;
+    }
   }
 
   getAddressForReserve(networkID: NetworkID) {
@@ -77,13 +82,17 @@ export abstract class Bond {
     return this.networkAddrs[networkID].reserveAddress;
   }
   getContractForReserve(networkID: NetworkID, provider: StaticJsonRpcProvider | JsonRpcSigner) {
+    try{
     const bondAddress = this.getAddressForReserve(networkID);
     return new ethers.Contract(bondAddress, this.reserveContract, provider);
+    }catch(error){
+      return null;
+    }
   }
 
   async getBondReservePrice(networkID: NetworkID, provider: StaticJsonRpcProvider | JsonRpcSigner) {
     const pairContract = this.getContractForReserve(networkID, provider);
-    const reserves = await pairContract.getReserves();
+    const reserves = await pairContract?.getReserves() || [0, 0];
     const marketPrice = reserves[1] / reserves[0] / Math.pow(10, 9);
 
     return marketPrice;
@@ -113,7 +122,7 @@ export class LPBond extends Bond {
     const token = this.getContractForReserve(networkID, provider);
     const tokenAddress = this.getAddressForReserve(networkID);
     const bondCalculator = getBondCalculator(networkID, provider);
-    const tokenAmount = await token.balanceOf(addresses[networkID].TREASURY_ADDRESS);
+    const tokenAmount = await token?.balanceOf(addresses[networkID].TREASURY_ADDRESS) || 0;
     const valuation = await bondCalculator.valuation(tokenAddress, tokenAmount);
     const markdown = await bondCalculator.markdown(tokenAddress);
     let tokenUSD = (valuation / Math.pow(10, 9)) * (markdown / Math.pow(10, 18));
@@ -141,7 +150,7 @@ export class StableBond extends Bond {
 
   async getTreasuryBalance(networkID: NetworkID, provider: StaticJsonRpcProvider) {
     let token = this.getContractForReserve(networkID, provider);
-    let tokenAmount = await token.balanceOf(addresses[networkID].TREASURY_ADDRESS);
+    let tokenAmount = await token?.balanceOf(addresses[networkID].TREASURY_ADDRESS) || 0;
     return tokenAmount / Math.pow(10, 18);
   }
 }

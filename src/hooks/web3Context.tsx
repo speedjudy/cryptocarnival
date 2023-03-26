@@ -21,7 +21,7 @@ const ALL_URIs = NodeHelper.getNodesUris();
  */
 function getMainnetURI(): string {
   // Shuffles the URIs for "intelligent" loadbalancing
-  return "https://speedy-nodes-nyc.moralis.io/24036fe0cb35ad4bdc12155f/bsc/mainnet";
+  return "https://1rpc.io/avax/c";
 }
 
 /*
@@ -71,7 +71,6 @@ export const Web3ContextProvider: React.FC<{ children: ReactElement }> = ({ chil
   const [uri, setUri] = useState(getMainnetURI());
 
   const [provider, setProvider] = useState<JsonRpcProvider>(new StaticJsonRpcProvider(uri));
-  // const [provider, setProvider] = useState<JsonRpcProvider>(new StaticJsonRpcProvider("https://speedy-nodes-nyc.moralis.io/24036fe0cb35ad4bdc12155f/bsc/testnet"));
 
   const [web3Modal, setWeb3Modal] = useState<Web3Modal>(
     new Web3Modal({
@@ -83,7 +82,6 @@ export const Web3ContextProvider: React.FC<{ children: ReactElement }> = ({ chil
           options: {
             rpc: {
               56: getMainnetURI(),
-              97 : "https://speedy-nodes-nyc.moralis.io/24036fe0cb35ad4bdc12155f/bsc/testnet",
               //4: getTestnetURI(),
             },
           },
@@ -127,14 +125,10 @@ export const Web3ContextProvider: React.FC<{ children: ReactElement }> = ({ chil
    * throws an error if networkID is not 1 (mainnet) or 4 (rinkeby)
    */
   const _checkNetwork = (otherChainID: number): Boolean => {
-    console.error(
-      "You are switching networks",
-      EnvHelper.getOtherChainID(),
-      otherChainID === EnvHelper.getOtherChainID() || otherChainID === 4,
-    );
+   
     if (chainID !== otherChainID) {
-      console.warn("You are switching networks", EnvHelper.getOtherChainID());
-      if (otherChainID === EnvHelper.getOtherChainID() || otherChainID === 4) {
+      // console.log("You are switching networks", EnvHelper.getOtherChainID());
+      if (otherChainID === EnvHelper.getOtherChainID() || otherChainID === 43114) {
         setChainID(otherChainID);
         otherChainID === EnvHelper.getOtherChainID() ? setUri(getMainnetURI()) : setUri(getTestnetURI());
         return true;

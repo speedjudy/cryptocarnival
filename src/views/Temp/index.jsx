@@ -24,12 +24,12 @@ function Temp() {
   const openV3_ProjectPool = (city) => {
     setCity(city);
   };
-  console.log(city);
+  // console.log(city);
   return (
     <div>
-      <div className="loader_first">
+      {/* <div className="loader_first">
         <div className="circular-spinner"></div>
-      </div>
+      </div> */}
 
       <div id="sc-banner" className="sc_banner_v3 banner-bg position-relative">
         <div className="container">

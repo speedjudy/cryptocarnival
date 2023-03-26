@@ -28,6 +28,7 @@ export const claimNFT = createAsyncThunk(
       dispatch(error("Please connect your wallet!"));
       return;
     }
+console.log("claimNFT() ===> ", provider, address, networkID);
 
     const signer = provider.getSigner();
     const faucetContract = new ethers.Contract(addresses[networkID].NFT_AIRDROP_ADDRESS as string, nftAirdropAbi, signer);
