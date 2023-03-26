@@ -66,7 +66,6 @@ function Faucet() {
                   style={{
                     height: isDesktop ? "60vh" : "auto",
                     width: isDesktop ? "auto" : "90vw",
-                    display: "none",
                   }}
                 />
               </div>
