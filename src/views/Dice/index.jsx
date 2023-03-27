@@ -90,7 +90,7 @@ function Dice() {
           <h3 className="result" ref={resultDice}>
             {result}
           </h3>
-          <h4>Sorry, dice not working on mobile ¯\_(ツ)_/¯</h4>
+          {/* <h4>Sorry, dice not working on mobile ¯\_(ツ)_/¯</h4> */}
         </div>
       </div>
 
