@@ -26,6 +26,7 @@ import { useWeb3Context } from "../../hooks";
 import { claimFaucet } from "../../slices/StakeThunk";
 
 import "./temp.scss";
+import PageLoaderCircle from "src/components/PageLoaderCircle";
 
 function Faucet() {
   const dispatch = useDispatch();
