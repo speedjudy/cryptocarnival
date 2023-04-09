@@ -1,3 +1,4 @@
+import {useState} from "react";
 import { AppBar, Toolbar, Box, Button, SvgIcon } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
@@ -38,7 +39,12 @@ const useStyles = makeStyles((theme) => ({
 function TopBar({ theme, toggleTheme, handleDrawerToggle }) {
   const classes = useStyles();
   const isVerySmallScreen = useMediaQuery("(max-width: 355px)");
+  const [navbar, setNavbar] = useState(false);
 
+  const onNavbar = () =>{
+    console.log(navbar);
+    setNavbar(!navbar);
+  }
   return (
     <AppBar position="sticky" className={classes.appBar} elevation={0}>
       <Toolbar disableGutters className="dapp-topbar">
@@ -56,7 +62,7 @@ function TopBar({ theme, toggleTheme, handleDrawerToggle }) {
                     </a>
                   </div>
                   <div className="header-menu">
-                    <ul className="nav-menu">
+                    <ul className="nav-menu ">
                       <li className="mega_menu_hov">
                         <a href="#" style={{ fontSize: "17px" }}>
                           Table of Contents +
@@ -309,12 +315,14 @@ function TopBar({ theme, toggleTheme, handleDrawerToggle }) {
                   </div>
                 </div>
                 <div className="gamfi-btn-area">
-                  <ul>
-                    <li>
+                  <ul className={`${navbar? "d-block":"d-flex"}`}
+                    style={{ position: navbar?"absolute":"relative", top: navbar?"5px":"", padding:navbar?"10px":"", left:navbar?"0px":"", width:navbar?"80%":"", background: navbar? "black" : "none" }}
+                  >
+                    <li className={`${navbar? "d-none":"d-block"}`}>
                       <a
                         id="nav-expander"
                         className="nav-expander bar"
-                        href="#"
+                        onClick={onNavbar}
                       >
                         <div className="bar">
                           <span className="dot1"></span>
@@ -323,7 +331,258 @@ function TopBar({ theme, toggleTheme, handleDrawerToggle }) {
                         </div>
                       </a>
                     </li>
-                    <li className="buy-token">
+                    <li className={`buy-token mega_menu_hov ${navbar? "d-block":"d-none"}`}
+                      style={{position:"relative"}}>
+                        <a href="#" 
+                        style={{ marginTop: "7px", marginLeft: "5px", }}
+                        className="readon black-shape">
+                          Table of Contents +
+                        </a>
+                        <div className="gamfi_mega_menu_sect">
+                          <div className="gamfi_mega_menu">
+                            <div className="container">
+                              <div className="mega_menu_content">
+                                <div className="mega_menu_left_sect">
+                                  <div className="mega_menu_left_bg_sect">
+                                    <div className="mega_menu_left_bg">
+                                      <div className="mega_menu_left_bg_color"></div>
+                                    </div>
+                                  </div>
+                                  <div className="home_menu_list">
+                                    <div className="home_menu_list_headings">
+                                      <h2>Games</h2>
+                                      <span>
+                                        <img
+                                          src={Image1}
+                                          alt=""
+                                          className="img-fluid"
+                                        />
+                                      </span>
+                                    </div>
+                                    <ul>
+                                      <li>
+                                        <a href="/contest">
+                                          Punch the Ape{" "}
+                                          <span>
+                                            <img
+                                              src={Image2}
+                                              alt="Index V1"
+                                              className="img-fluid"
+                                            />
+                                          </span>
+                                        </a>
+                                      </li>
+                                      <li>
+                                        <a href="/contest">
+                                          Muskpisser{" "}
+                                          <span>
+                                            <img
+                                              src={Image3}
+                                              alt="Index V2"
+                                              className="img-fluid"
+                                            />
+                                          </span>
+                                        </a>
+                                      </li>
+                                      <li>
+                                        <a href="/contest">
+                                          Sam Bankman is Fried{" "}
+                                          <span>
+                                            <img
+                                              src={Image4}
+                                              alt="Index V3"
+                                              className="img-fluid"
+                                            />
+                                          </span>
+                                        </a>
+                                      </li>
+                                      <li>
+                                        <a href="/contest">
+                                          Tornado Spinner{" "}
+                                          <span>
+                                            <img
+                                              src={Image5}
+                                              alt="Index V3"
+                                              className="img-fluid"
+                                            />
+                                          </span>
+                                        </a>
+                                      </li>
+                                      <li>
+                                        <a href="/contest">
+                                          Your Game Here!{" "}
+                                          <span>
+                                            <img
+                                              src={Image2}
+                                              alt="Index V3"
+                                              className="img-fluid"
+                                            />
+                                          </span>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+
+                                <div className="home_menu_right_sect">
+                                  <div className=""></div>
+                                  <div className="menu_column project_column">
+                                    <ul>
+                                      <li>
+                                        <a href="/comingsoon">
+                                          Dupont, Dylan-Ennis, <br />
+                                          &amp; Kavanagh
+                                        </a>
+                                      </li>
+                                    </ul>
+                                    <div className="menu_headings">
+                                      <h2>Part 1: Big Tent</h2>
+                                      <span>
+                                        <img
+                                          src={Image1}
+                                          alt=""
+                                          className="img-fluid"
+                                        />
+                                      </span>
+                                    </div>
+                                    <ul>
+                                      <li>
+                                        <a href="/comingsoon">Kelsie Nabben</a>
+                                      </li>
+                                      <li>
+                                        <a href="/comingsoon">
+                                          Nathan Schneider
+                                        </a>
+                                      </li>
+                                      <li>
+                                        <a href="/comingsoon">Quinn DuPont</a>
+                                      </li>
+                                      <li>
+                                        <a href="/comingsoon">Eric Alston</a>
+                                      </li>
+                                      <li>
+                                        <a href="/comingsoon">Tara Merk</a>
+                                      </li>
+                                      <li>
+                                        <a href="/comingsoon">
+                                          Paul Dylan-Ennis
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+
+                                  <div className="two_menu_column">
+                                    <div className="menu_column project_column">
+                                      <div className="menu_headings">
+                                        <h2>Part 2: Vaudeville</h2>
+                                        <span>
+                                          <img
+                                            src={Image1}
+                                            alt=""
+                                            className="img-fluid"
+                                          />
+                                        </span>
+                                      </div>
+                                      <ul>
+                                        <li>
+                                          <a href="/comingsoon">
+                                            de Filippi, Mannan, &amp; Reijers
+                                          </a>
+                                        </li>
+                                        <li>
+                                          <a href="/comingsoon">Geert Lovink</a>
+                                        </li>
+                                        <li>
+                                          <a href="/comingsoon">Lana Swartz</a>
+                                        </li>
+                                        <li>
+                                          <a href="/comingsoon">
+                                            Alesha Sereda
+                                          </a>
+                                        </li>
+                                        <li>
+                                          <a href="/comingsoon">
+                                            Bernhard Resch
+                                          </a>
+                                        </li>
+                                        <li>
+                                          <a href="/comingsoon">Jason Potts</a>
+                                        </li>
+                                      </ul>
+                                    </div>
+
+                                    <div className="menu_column project_column">
+                                      <div className="menu_headings">
+                                        <h2>Part 3: Dare Devils</h2>
+                                        <span>
+                                          <img
+                                            src={Image1}
+                                            alt=""
+                                            className="img-fluid"
+                                          />
+                                        </span>
+                                      </div>
+                                      <ul>
+                                        <li>
+                                          <a href="/comingsoon">Finn Brunton</a>
+                                        </li>
+                                        <li>
+                                          <a href="/comingsoon">
+                                            Victoria Lemieux
+                                          </a>
+                                        </li>
+                                        <li>
+                                          <a href="/comingsoon">
+                                            Sandra Faustino
+                                          </a>
+                                        </li>
+                                        <li>
+                                          <a href="/comingsoon">
+                                            Donncha Kavanagh
+                                          </a>
+                                        </li>
+                                        <li>
+                                          <a href="/comingsoon">JP Vergne</a>
+                                        </li>
+                                        <li>
+                                          <a href="/comingsoon">Bill Maurer</a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+
+                                  <div className="menu_column project_column">
+                                    <div className="menu_headings">
+                                      <h2>Meta</h2>
+                                      <span>
+                                        <img
+                                          src={Image1}
+                                          alt=""
+                                          className="img-fluid"
+                                        />
+                                      </span>
+                                    </div>
+                                    <ul>
+                                      <li>
+                                        <a href="/dice">Play Games</a>
+                                        <span className="hot">HOT</span>
+                                      </li>
+                                      <li>
+                                        <a href="/comingsoon">Download PDF</a>
+                                        <span className="soon">SOON</span>
+                                      </li>
+                                      <li>
+                                        <a href="/about">Colophon & About</a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </li>
+                    <li className={`buy-token ${navbar? "d-block":""}`}>
                       <a
                         className="readon black-shape"
                         href="/nftairdrop"
@@ -336,7 +595,7 @@ function TopBar({ theme, toggleTheme, handleDrawerToggle }) {
                         <span className="hover-shape3"></span>
                       </a>
                     </li>
-                    <li className="buy-token">
+                    <li className={`buy-token ${navbar? "d-block":""}`}>
                       <a
                         className="readon black-shape"
                         href="/faucet"
@@ -349,6 +608,14 @@ function TopBar({ theme, toggleTheme, handleDrawerToggle }) {
                         <span className="hover-shape3"></span>
                       </a>
                     </li>
+                    <div 
+                      className={`${navbar? "d-block":"d-none"}`}
+                      style={{ position:"absolute", top: "7px", right: "5px", color:"white", fontSize: "35px" }}
+                      onClick={onNavbar}>
+                      <span
+                       
+                      >&times;</span>
+                    </div>
                     <Box display="flex">
                       {/* {!isVerySmallScreen && <OhmMenu />} */}
 

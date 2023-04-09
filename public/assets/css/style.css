@@ -13173,6 +13173,12 @@ div.latest-item .hover-shape-bg {
   display: flex;
 }
 
+@media only screen and (max-width: 600px) {
+  .gamfi-header-section .gamfi-btn-area > ul {
+    display: block;
+  }
+}
+
 .gamfi-header-section .right_menu_togle {
   background: #FFFFFF;
   padding: 66px 60px 50px 50px;
