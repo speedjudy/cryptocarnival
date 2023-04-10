@@ -341,7 +341,7 @@ function TopBar({ theme, toggleTheme, handleDrawerToggle }) {
                     </li>
                     <li className={`buy-token ${navbar? "d-block":"d-none"}`}
                       style={{position:"relative"}}>
-                        <a href="/contest" 
+                        <a href="/dice" 
                         style={{ marginTop: "7px", width: "100%" , marginLeft: "5px", }}
                         className="readon black-shape">
                           Play Games
@@ -349,7 +349,7 @@ function TopBar({ theme, toggleTheme, handleDrawerToggle }) {
                     </li>
                     <li className={`buy-token ${navbar? "d-block":"d-none"}`}
                       style={{position:"relative"}}>
-                        <a href="/contest" 
+                        <a href="/about" 
                         style={{ marginTop: "7px", width: "100%" , marginLeft: "5px", }}
                         className="readon black-shape">
                           About
