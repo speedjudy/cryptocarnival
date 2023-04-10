@@ -316,7 +316,7 @@ function TopBar({ theme, toggleTheme, handleDrawerToggle }) {
                 </div>
                 <div className="gamfi-btn-area">
                   <ul className={`${navbar? "d-block":"d-flex"}`}
-                    style={{ position: navbar?"absolute":"relative", top: navbar?"5px":"", padding:navbar?"10px":"", left:navbar?"0px":"", width:navbar?"80%":"", background: navbar? "black" : "none" }}
+                    style={{ position: navbar?"absolute":"relative", top: navbar?"5px":"", padding:navbar?"10px":"", right:navbar?"0px":"", width:navbar?"80%":"", background: navbar? "black" : "none" }}
                   >
                     <li className={`${navbar? "d-none":"d-block"}`}>
                       <a
@@ -331,265 +331,37 @@ function TopBar({ theme, toggleTheme, handleDrawerToggle }) {
                         </div>
                       </a>
                     </li>
-                    <li className={`buy-token mega_menu_hov ${navbar? "d-block":"d-none"}`}
+                    <li className={`buy-token ${navbar? "d-block":"d-none"}`}
                       style={{position:"relative"}}>
-                        <a href="#" 
-                        style={{ marginTop: "7px", marginLeft: "5px", }}
+                        <a href="/contest" 
+                        style={{ marginTop: "35px", width: "100%" , marginLeft: "5px", }}
                         className="readon black-shape">
-                          Table of Contents +
+                          Contest
                         </a>
-                        <div className="gamfi_mega_menu_sect">
-                          <div className="gamfi_mega_menu">
-                            <div className="container">
-                              <div className="mega_menu_content">
-                                <div className="mega_menu_left_sect">
-                                  <div className="mega_menu_left_bg_sect">
-                                    <div className="mega_menu_left_bg">
-                                      <div className="mega_menu_left_bg_color"></div>
-                                    </div>
-                                  </div>
-                                  <div className="home_menu_list">
-                                    <div className="home_menu_list_headings">
-                                      <h2>Games</h2>
-                                      <span>
-                                        <img
-                                          src={Image1}
-                                          alt=""
-                                          className="img-fluid"
-                                        />
-                                      </span>
-                                    </div>
-                                    <ul>
-                                      <li>
-                                        <a href="/contest">
-                                          Punch the Ape{" "}
-                                          <span>
-                                            <img
-                                              src={Image2}
-                                              alt="Index V1"
-                                              className="img-fluid"
-                                            />
-                                          </span>
-                                        </a>
-                                      </li>
-                                      <li>
-                                        <a href="/contest">
-                                          Muskpisser{" "}
-                                          <span>
-                                            <img
-                                              src={Image3}
-                                              alt="Index V2"
-                                              className="img-fluid"
-                                            />
-                                          </span>
-                                        </a>
-                                      </li>
-                                      <li>
-                                        <a href="/contest">
-                                          Sam Bankman is Fried{" "}
-                                          <span>
-                                            <img
-                                              src={Image4}
-                                              alt="Index V3"
-                                              className="img-fluid"
-                                            />
-                                          </span>
-                                        </a>
-                                      </li>
-                                      <li>
-                                        <a href="/contest">
-                                          Tornado Spinner{" "}
-                                          <span>
-                                            <img
-                                              src={Image5}
-                                              alt="Index V3"
-                                              className="img-fluid"
-                                            />
-                                          </span>
-                                        </a>
-                                      </li>
-                                      <li>
-                                        <a href="/contest">
-                                          Your Game Here!{" "}
-                                          <span>
-                                            <img
-                                              src={Image2}
-                                              alt="Index V3"
-                                              className="img-fluid"
-                                            />
-                                          </span>
-                                        </a>
-                                      </li>
-                                    </ul>
-                                  </div>
-                                </div>
-
-                                <div className="home_menu_right_sect">
-                                  <div className=""></div>
-                                  <div className="menu_column project_column">
-                                    <ul>
-                                      <li>
-                                        <a href="/comingsoon">
-                                          Dupont, Dylan-Ennis, <br />
-                                          &amp; Kavanagh
-                                        </a>
-                                      </li>
-                                    </ul>
-                                    <div className="menu_headings">
-                                      <h2>Part 1: Big Tent</h2>
-                                      <span>
-                                        <img
-                                          src={Image1}
-                                          alt=""
-                                          className="img-fluid"
-                                        />
-                                      </span>
-                                    </div>
-                                    <ul>
-                                      <li>
-                                        <a href="/comingsoon">Kelsie Nabben</a>
-                                      </li>
-                                      <li>
-                                        <a href="/comingsoon">
-                                          Nathan Schneider
-                                        </a>
-                                      </li>
-                                      <li>
-                                        <a href="/comingsoon">Quinn DuPont</a>
-                                      </li>
-                                      <li>
-                                        <a href="/comingsoon">Eric Alston</a>
-                                      </li>
-                                      <li>
-                                        <a href="/comingsoon">Tara Merk</a>
-                                      </li>
-                                      <li>
-                                        <a href="/comingsoon">
-                                          Paul Dylan-Ennis
-                                        </a>
-                                      </li>
-                                    </ul>
-                                  </div>
-
-                                  <div className="two_menu_column">
-                                    <div className="menu_column project_column">
-                                      <div className="menu_headings">
-                                        <h2>Part 2: Vaudeville</h2>
-                                        <span>
-                                          <img
-                                            src={Image1}
-                                            alt=""
-                                            className="img-fluid"
-                                          />
-                                        </span>
-                                      </div>
-                                      <ul>
-                                        <li>
-                                          <a href="/comingsoon">
-                                            de Filippi, Mannan, &amp; Reijers
-                                          </a>
-                                        </li>
-                                        <li>
-                                          <a href="/comingsoon">Geert Lovink</a>
-                                        </li>
-                                        <li>
-                                          <a href="/comingsoon">Lana Swartz</a>
-                                        </li>
-                                        <li>
-                                          <a href="/comingsoon">
-                                            Alesha Sereda
-                                          </a>
-                                        </li>
-                                        <li>
-                                          <a href="/comingsoon">
-                                            Bernhard Resch
-                                          </a>
-                                        </li>
-                                        <li>
-                                          <a href="/comingsoon">Jason Potts</a>
-                                        </li>
-                                      </ul>
-                                    </div>
-
-                                    <div className="menu_column project_column">
-                                      <div className="menu_headings">
-                                        <h2>Part 3: Dare Devils</h2>
-                                        <span>
-                                          <img
-                                            src={Image1}
-                                            alt=""
-                                            className="img-fluid"
-                                          />
-                                        </span>
-                                      </div>
-                                      <ul>
-                                        <li>
-                                          <a href="/comingsoon">Finn Brunton</a>
-                                        </li>
-                                        <li>
-                                          <a href="/comingsoon">
-                                            Victoria Lemieux
-                                          </a>
-                                        </li>
-                                        <li>
-                                          <a href="/comingsoon">
-                                            Sandra Faustino
-                                          </a>
-                                        </li>
-                                        <li>
-                                          <a href="/comingsoon">
-                                            Donncha Kavanagh
-                                          </a>
-                                        </li>
-                                        <li>
-                                          <a href="/comingsoon">JP Vergne</a>
-                                        </li>
-                                        <li>
-                                          <a href="/comingsoon">Bill Maurer</a>
-                                        </li>
-                                      </ul>
-                                    </div>
-                                  </div>
-
-                                  <div className="menu_column project_column">
-                                    <div className="menu_headings">
-                                      <h2>Meta</h2>
-                                      <span>
-                                        <img
-                                          src={Image1}
-                                          alt=""
-                                          className="img-fluid"
-                                        />
-                                      </span>
-                                    </div>
-                                    <ul>
-                                      <li>
-                                        <a href="/dice">Play Games</a>
-                                        <span className="hot">HOT</span>
-                                      </li>
-                                      <li>
-                                        <a href="/comingsoon">Download PDF</a>
-                                        <span className="soon">SOON</span>
-                                      </li>
-                                      <li>
-                                        <a href="/about">Colophon & About</a>
-                                      </li>
-                                    </ul>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                    </li>
+                    <li className={`buy-token ${navbar? "d-block":"d-none"}`}
+                      style={{position:"relative"}}>
+                        <a href="/contest" 
+                        style={{ marginTop: "7px", width: "100%" , marginLeft: "5px", }}
+                        className="readon black-shape">
+                          Play Games
+                        </a>
+                    </li>
+                    <li className={`buy-token ${navbar? "d-block":"d-none"}`}
+                      style={{position:"relative"}}>
+                        <a href="/contest" 
+                        style={{ marginTop: "7px", width: "100%" , marginLeft: "5px", }}
+                        className="readon black-shape">
+                          About
+                        </a>
                     </li>
                     <li className={`buy-token ${navbar? "d-block":""}`}>
                       <a
                         className="readon black-shape"
                         href="/nftairdrop"
-                        style={{ marginTop: "7px", marginLeft: "5px" }}
+                        style={{ marginTop: "7px", width: "100%" , marginLeft: "5px" }}
                       >
                         <span className="btn-text">Get NFT airdrop </span>
-                        <i className="icon-arrow_down"></i>
                         <span className="hover-shape1"></span>
                         <span className="hover-shape2"></span>
                         <span className="hover-shape3"></span>
@@ -599,10 +371,9 @@ function TopBar({ theme, toggleTheme, handleDrawerToggle }) {
                       <a
                         className="readon black-shape"
                         href="/faucet"
-                        style={{ marginTop: "7px", marginLeft: "5px" }}
+                        style={{ marginTop: "7px", width: "100%" , marginLeft: "5px" }}
                       >
                         <span className="btn-text">Get Tokens </span>
-                        <i className="icon-arrow_down"></i>
                         <span className="hover-shape1"></span>
                         <span className="hover-shape2"></span>
                         <span className="hover-shape3"></span>
