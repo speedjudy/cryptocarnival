@@ -1,7 +1,4 @@
-# My freelancer account has been closed. Please contact me via skype or email. skype: live:.cid.3100cf5693c20451
-# email: speedjudy928@gmail.com
-
-# Created by Xing Shang
+# Created by Speed
 1. install node-v16.10.0-x64.msi and yarn-1.22.5.msi
 2. install vscode
 3. goto sourcecode directory and open project with vscode.
