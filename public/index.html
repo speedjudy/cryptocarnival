@@ -87,27 +87,25 @@
 </html>
 <div style="display: none">
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <!-- <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-WNVZ6YBXVZ"
-  ></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-
-    gtag("config", "G-WNVZ6YBXVZ");
-    gtag("config", "G-8LPEK6KQVS");
-  </script> -->
 </div>
 <script>
   console.log = function () { };
+  console.error = function () { };
+  console.warn = function () { };
+  console.group = function () { };
+  console.groupEnd = function () { };
+  console.table = function () { };
   // Hide errors
   window.onerror = function () {
     return true;
   }
+  console.filter(function (severity, args) {
+    if (severity === 'warning' || severity === 'error') {
+      return true; // mute the console message
+    } else {
+      return false; // show the console message
+    }
+  });
 
   // Ignore errors
   window.addEventListener('error', function (e) {
@@ -147,10 +145,22 @@
 <script src="%PUBLIC_URL%/assets/js/custom/home3.js"></script>
 <script>
   console.log = function () { };
+  console.error = function () { };
+  console.warn = function () { };
+  console.group = function () { };
+  console.groupEnd = function () { };
+  console.table = function () { };
   // Hide errors
   window.onerror = function () {
     return true;
   }
+  console.filter(function (severity, args) {
+  if (severity === 'warning' || severity === 'error') {
+    return true; // mute the console message
+  } else {
+    return false; // show the console message
+  }
+});
 
   // Ignore errors
   window.addEventListener('error', function (e) {
