@@ -5,5 +5,5 @@ export { default as Thankyou } from "./Thankyou/index";
 export { default as Dice } from "./Dice/index";
 export { default as About } from "./About/index";
 export { default as Faucet } from "./Faucet/index";
-export { default as nabben } from "./nabben/index";
+export { default as Nabben } from "./Nabben/index";
 export { default as AirdropNFT } from "./AirdropNFT/index";

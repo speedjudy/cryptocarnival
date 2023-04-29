@@ -228,6 +228,8 @@ function App() {
               </Route>
               <Route exact path="/dice">
                 <Dice />
+              <Route exact path="/nabben">
+                <Nabben />
               </Route>
               <Route exact path="/">
                 <Redirect to="index" />
