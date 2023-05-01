@@ -1,30 +1,14 @@
-import image1 from "../../assets/images/homeV3/joker.png";
 import image2 from "../../assets/images/icons/steps.png";
-import image3 from "../../assets/images/icons/BlockChain1.png";
-import image4 from "../../assets/images/icons/BlockChain6.png";
-import image5 from "../../assets/images/icons/BlockChain3.png";
-import image6 from "../../assets/images/icons/BlockChain4.png";
-import image7 from "../../assets/images/icons/BlockChain5.png";
-import image8 from "../../assets/images/icons/BlockChain2.png";
-import image9 from "../../assets/images/icons/BlockChain2.png";
-import image10 from "../../assets/images/icons/One.svg";
-import image11 from "../../assets/images/icons/two.svg";
-import image12 from "../../assets/images/icons/three.svg";
-import image13 from "../../assets/images/icons/earthBg.svg";
-import image14 from "../../assets/images/icons/plus.svg";
-import image15 from "../../assets/images/icons/munis.svg";
 import image16 from "../../assets/images/icons/steps2.png";
-import image17 from "../../assets/images/icons/galaxy_image.png";
 import image18 from "../../assets/images/logo.png";
 import image19 from "../../assets/images/underconstruction.png";
-
 import "./temp.scss";
 import PageLoaderCircle from "src/components/PageLoaderCircle";
 
 function Comingsoon() {
   return (
     <div>
-      <PageLoaderCircle delay={5000} />
+      <PageLoaderCircle delay={1500} />
       <div id="sc-banner" className="sc_banner_v3 banner-bg position-relative">
         <div className="container">
           <div className="banner-content v3_banner_content">
@@ -43,20 +27,13 @@ function Comingsoon() {
                     data-wow-delay="0.5s"
                     data-wow-duration="0.7s"
                   >
-                    We're hard at work on the CryptoCarnival, but we need your
-                    help! This website (and the electronic book) are an
-                    experiment in web3 publication. Upon launch, NFTs will be
-                    minted, traditional publication records registered, and, to
-                    enhance the Web3 reading experience, free token-based
-                    on-chain games will be available on this website (games will
-                    require a Web3 wallet and our{" "}
-                    <a href="/faucet">free CCWTF tokens</a>). See our{" "}
-                    <a href="/dice">Dice Game</a>, for example.
+                    We're hard at work on the CryptoCarnival! This website (and the forthcoming electronic book) are an
+                    experiment in web3 publication. Essays will soon be published and to enhance your Web3 reading experience, free token-based
+                    <a href="/dice">on-chain games</a> and <a href="/nftairdrop">NFTs</a> are available on this website (our{" "}
+                    <a href="/faucet">free CCWTF tokens</a> are also available).
                   </p>
                   <p>
-                    But first, to help us complete the experience, we need the
-                    Web3 community to build and contribute on-chain games for
-                    the carnival. If you have an idea and can program basic
+                    If you have an idea for a fun game and can program basic
                     chain scripts, please{" "}
                     <a href="/contest">JOIN THE CONTEST</a>. Winning entries
                     will receive a small prize and everlasting fame and glory.

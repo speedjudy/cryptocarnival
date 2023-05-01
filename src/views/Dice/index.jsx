@@ -70,7 +70,7 @@ function Dice() {
 
   return (
     <div>
-      <PageLoaderCircle delay={5000} />
+      <PageLoaderCircle delay={1500} />
 
       <div className="container">
         <div className="footer-cta-area text-center active-shape hover-shape-inner">

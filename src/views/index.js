@@ -1,4 +1,4 @@
-export { default as Temp } from "./Temp/index";
+export { default as Home } from "./Home/index";
 export { default as Contest } from "./Contest/index";
 export { default as Comingsoon } from "./Comingsoon/index";
 export { default as Thankyou } from "./Thankyou/index";

@@ -7,7 +7,7 @@ import PageLoaderCircle from "src/components/PageLoaderCircle";
 function nabben() {
   return (
     
-    <div class="container">
+    <div class=".container-fluid">
         <PageLoaderCircle delay={1500} />
         <div class=".container-fluid">
         <h1

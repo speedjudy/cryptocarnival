@@ -7,12 +7,7 @@ import Logo from "../../assets/images/logo.png";
 import Image1 from "../../assets/images/megaMenu/border-buttomShape.png";
 import Image2 from "../../assets/images/megaMenu/index-V1.png";
 import Image3 from "../../assets/images/megaMenu/index-V2.png";
-import Image4 from "../../assets/images/megaMenu/index-V3.png";
-import Image5 from "../../assets/images/megaMenu/index-V4.png";
 import Image6 from "../../assets/images/logo-dark.png";
-
-import OhmMenu from "./OhmMenu.jsx";
-import ThemeSwitcher from "./ThemeSwitch.jsx";
 import ConnectMenu from "./ConnectMenu.jsx";
 import "./topbar.scss";
 
@@ -79,7 +74,7 @@ function TopBar({ theme, toggleTheme, handleDrawerToggle }) {
                                   </div>
                                   <div className="home_menu_list">
                                     <div className="home_menu_list_headings">
-                                      <h2>Games</h2>
+                                      <h2>Fun &amp; Games</h2>
                                       <span>
                                         <img
                                           src={Image1}
@@ -90,8 +85,8 @@ function TopBar({ theme, toggleTheme, handleDrawerToggle }) {
                                     </div>
                                     <ul>
                                       <li>
-                                        <a href="/contest">
-                                          Punch the Ape{" "}
+                                        <a href="/dice">
+                                          The Gambler{" "}
                                           <span>
                                             <img
                                               src={Image2}
@@ -102,36 +97,12 @@ function TopBar({ theme, toggleTheme, handleDrawerToggle }) {
                                         </a>
                                       </li>
                                       <li>
-                                        <a href="/contest">
-                                          Muskpisser{" "}
+                                        <a href="/nftairdrop">
+                                          The Crow Queen{" "}
                                           <span>
                                             <img
                                               src={Image3}
                                               alt="Index V2"
-                                              className="img-fluid"
-                                            />
-                                          </span>
-                                        </a>
-                                      </li>
-                                      <li>
-                                        <a href="/contest">
-                                          Sam Bankman is Fried{" "}
-                                          <span>
-                                            <img
-                                              src={Image4}
-                                              alt="Index V3"
-                                              className="img-fluid"
-                                            />
-                                          </span>
-                                        </a>
-                                      </li>
-                                      <li>
-                                        <a href="/contest">
-                                          Tornado Spinner{" "}
-                                          <span>
-                                            <img
-                                              src={Image5}
-                                              alt="Index V3"
                                               className="img-fluid"
                                             />
                                           </span>
@@ -176,26 +147,22 @@ function TopBar({ theme, toggleTheme, handleDrawerToggle }) {
                                     </div>
                                     <ul>
                                       <li>
+                                        <a href="/comingsoon">Nathan Schneider</a>
+                                      </li>
+                                      <li>
                                         <a href="/comingsoon">Kelsie Nabben</a>
                                       </li>
                                       <li>
-                                        <a href="/comingsoon">
-                                          Nathan Schneider
-                                        </a>
-                                      </li>
+                                          <a href="/comingsoon">Bernhard Resch</a>
+                                        </li>
                                       <li>
                                         <a href="/comingsoon">Quinn DuPont</a>
                                       </li>
                                       <li>
-                                        <a href="/comingsoon">Eric Alston</a>
+                                        <a href="/comingsoon">Tara Merk &amp; Rolf Hoefer</a>
                                       </li>
                                       <li>
-                                        <a href="/comingsoon">Tara Merk</a>
-                                      </li>
-                                      <li>
-                                        <a href="/comingsoon">
-                                          Paul Dylan-Ennis
-                                        </a>
+                                        <a href="/comingsoon">Paul Dylan-Ennis</a>
                                       </li>
                                     </ul>
                                   </div>
@@ -214,28 +181,22 @@ function TopBar({ theme, toggleTheme, handleDrawerToggle }) {
                                       </div>
                                       <ul>
                                         <li>
-                                          <a href="/comingsoon">
-                                            de Filippi, Mannan, &amp; Reijers
-                                          </a>
+                                          <a href="/comingsoon">de Filippi, Mannan, &amp; Reijers</a>
                                         </li>
                                         <li>
                                           <a href="/comingsoon">Geert Lovink</a>
                                         </li>
                                         <li>
-                                          <a href="/comingsoon">Lana Swartz</a>
+                                          <a href="/comingsoon">Alesha Sereda</a>
                                         </li>
                                         <li>
-                                          <a href="/comingsoon">
-                                            Alesha Sereda
-                                          </a>
+                                        <a href="/comingsoon">Eric Alston</a>
                                         </li>
                                         <li>
-                                          <a href="/comingsoon">
-                                            Bernhard Resch
-                                          </a>
+                                          <a href="/comingsoon">JP Vergne</a>
                                         </li>
                                         <li>
-                                          <a href="/comingsoon">Jason Potts</a>
+                                          <a href="/comingsoon">Donncha Kavanagh</a>
                                         </li>
                                       </ul>
                                     </div>
@@ -253,28 +214,22 @@ function TopBar({ theme, toggleTheme, handleDrawerToggle }) {
                                       </div>
                                       <ul>
                                         <li>
-                                          <a href="/comingsoon">Finn Brunton</a>
+                                          <a href="/comingsoon">Sandra Faustino</a>
                                         </li>
                                         <li>
-                                          <a href="/comingsoon">
-                                            Victoria Lemieux
-                                          </a>
+                                          <a href="/comingsoon">Jason Potts</a>
                                         </li>
                                         <li>
-                                          <a href="/comingsoon">
-                                            Sandra Faustino
-                                          </a>
+                                          <a href="/comingsoon">Diane-Laure &amp; Sam Eglin</a>
                                         </li>
                                         <li>
-                                          <a href="/comingsoon">
-                                            Donncha Kavanagh
-                                          </a>
-                                        </li>
-                                        <li>
-                                          <a href="/comingsoon">JP Vergne</a>
+                                          <a href="/comingsoon">Victoria Lemieux</a>
                                         </li>
                                         <li>
                                           <a href="/comingsoon">Bill Maurer</a>
+                                        </li>
+                                        <li>
+                                          <a href="/comingsoon">Finn Brunton</a>
                                         </li>
                                       </ul>
                                     </div>
@@ -361,7 +316,7 @@ function TopBar({ theme, toggleTheme, handleDrawerToggle }) {
                         href="/nftairdrop"
                         style={{ marginTop: "7px", width: "100%" , marginLeft: "5px" }}
                       >
-                        <span className="btn-text">Get NFT airdrop </span>
+                        <span className="btn-text">Get NFT </span>
                         <span className="hover-shape1"></span>
                         <span className="hover-shape2"></span>
                         <span className="hover-shape3"></span>

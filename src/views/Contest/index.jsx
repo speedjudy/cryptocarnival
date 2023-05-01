@@ -1,16 +1,4 @@
-import image1 from "../../assets/images/homeV3/joker.png";
 import image2 from "../../assets/images/icons/steps.png";
-import image3 from "../../assets/images/icons/BlockChain1.png";
-import image4 from "../../assets/images/icons/BlockChain6.png";
-import image5 from "../../assets/images/icons/BlockChain3.png";
-import image6 from "../../assets/images/icons/BlockChain4.png";
-import image7 from "../../assets/images/icons/BlockChain5.png";
-import image8 from "../../assets/images/icons/BlockChain2.png";
-import image9 from "../../assets/images/icons/BlockChain2.png";
-import image10 from "../../assets/images/icons/One.svg";
-import image11 from "../../assets/images/icons/two.svg";
-import image12 from "../../assets/images/icons/three.svg";
-import image13 from "../../assets/images/icons/earthBg.svg";
 import image14 from "../../assets/images/icons/plus.svg";
 import image15 from "../../assets/images/icons/munis.svg";
 import image16 from "../../assets/images/icons/steps2.png";
@@ -23,7 +11,7 @@ import PageLoaderCircle from "src/components/PageLoaderCircle";
 function Contest() {
   return (
     <div>
-      <PageLoaderCircle delay={5000} />
+      <PageLoaderCircle delay={1500} />
 
       <div id="sc-banner" className="sc_banner_v3 banner-bg position-relative">
         <div className="container">
@@ -43,16 +31,15 @@ function Contest() {
                     data-wow-delay="0.5s"
                     data-wow-duration="0.7s"
                   >
-                    Build on-chain games, give back to the community, and win
+                    Build on-chain games, give back to the community, and win NFT 
                     prizes.
                   </h3>
 
                   <p>
-                    Until December 30th, 2022, we are running a builder's
-                    contest for the best web-based, on-chain carnival games. We
+                    We are running an ongoing  builder's contest to solicit the best web-based, on-chain carnival games. We
                     want to inspire the Web3 community to design simple
                     (optional: stupid) games that critically reflect on the
-                    carnivalesque nature of Web3 in 2022 (see our{" "}
+                    carnivalesque nature of Web3 (see our{" "}
                     <a href="/dice">Dice Game</a> example). Winning entries will
                     be integrated into this website alongside essays from top
                     international scholars.
@@ -68,10 +55,9 @@ function Contest() {
                   </p>
 
                   <h3>Prizes</h3>
-                  <h4>1st prize: 200,000,000 GWEI</h4>
-                  <h4>2nd prize: 85,000,000 GWEI</h4>
-                  <h4>3rd prize: 50,000,000 GWEI</h4>
-                  <h4>Runner up prizes: 10,000,000 GWEI</h4>
+                  <h4>1st prize: Gold NFT</h4>
+                  <h4>2nd prize: Silver NFT</h4>
+                  <h4>3rd prize: Bronze NFT</h4>
                   <p>
                     Plus you will receive everlasting fame and glory! Your game
                     will be digitally emblazoned in the Crypto
@@ -104,10 +90,10 @@ function Contest() {
                   <a href="https://www.dropbox.com/request/xmAAXTUn74WD2g1i1kO3">
                     Dropbox directory
                   </a>{" "}
-                  by December 30th, 2022. In this ZIP file, please include all
+                  In this ZIP file, please include all
                   game assets and any additional links or identifying
                   information you would like published with your game (if you
-                  want to be considered for the prize money please include your
+                  want to be considered for the NFT prize please include your
                   ETH wallet address). Game assets might include: chain code
                   (Solidity, Rust, etc.), front-end code (HTML, CSS, JS), and
                   any other assets (images, audio, etc.).

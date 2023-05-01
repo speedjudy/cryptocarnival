@@ -23,7 +23,7 @@ import PageLoaderCircle from "src/components/PageLoaderCircle";
 function Thankyou() {
   return (
     <div>
-      <PageLoaderCircle delay={5000} />
+      <PageLoaderCircle delay={1500} />
       <div id="sc-banner" className="sc_banner_v3 banner-bg position-relative">
         <div className="container">
           <div className="banner-content v3_banner_content">

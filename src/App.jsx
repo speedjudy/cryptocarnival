@@ -16,7 +16,7 @@ import { calcBondDetails } from "./slices/BondSlice";
 import { loadAppDetails } from "./slices/AppSlice";
 import { loadAccountDetails, calculateUserBondDetails } from "./slices/AccountSlice";
 
-import { Temp, Contest, Comingsoon, About, Faucet, AirdropNFT, Thankyou, Nabben, Dice} from "./views";
+import { Home, Contest, Comingsoon, About, Faucet, AirdropNFT, Thankyou, Nabben, Dice} from "./views";
 import TopBar from "./components/TopBar/TopBar.jsx";
 import Messages from "./components/Messages/Messages";
 import NotFound from "./views/404/NotFound";
@@ -206,7 +206,7 @@ function App() {
           <div className={`${path === "/" ? null : classes.content} ${isSmallerScreen && classes.contentShift}`}>
             <Switch>
               <Route exact path="/index">
-                <Temp />
+                <Home />
               </Route>
               <Route exact path="/contest">
                 <Contest />
