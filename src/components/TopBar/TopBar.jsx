@@ -87,37 +87,16 @@ function TopBar({ theme, toggleTheme, handleDrawerToggle }) {
                                       <li>
                                         <a href="/dice">
                                           The Gambler{" "}
-                                          <span>
-                                            <img
-                                              src={Image2}
-                                              alt="Index V1"
-                                              className="img-fluid"
-                                            />
-                                          </span>
                                         </a>
                                       </li>
                                       <li>
                                         <a href="/nftairdrop">
                                           The Crow Queen{" "}
-                                          <span>
-                                            <img
-                                              src={Image3}
-                                              alt="Index V2"
-                                              className="img-fluid"
-                                            />
-                                          </span>
                                         </a>
                                       </li>
                                       <li>
                                         <a href="/contest">
                                           Your Game Here!{" "}
-                                          <span>
-                                            <img
-                                              src={Image2}
-                                              alt="Index V3"
-                                              className="img-fluid"
-                                            />
-                                          </span>
                                         </a>
                                       </li>
                                     </ul>
@@ -288,10 +267,10 @@ function TopBar({ theme, toggleTheme, handleDrawerToggle }) {
                     </li>
                     <li className={`buy-token ${navbar? "d-block":"d-none"}`}
                       style={{position:"relative"}}>
-                        <a href="/contest" 
+                        <a href="/comingsoon" 
                         style={{ marginTop: "35px", width: "100%" , marginLeft: "5px", }}
                         className="readon black-shape">
-                          Contest
+                          Read Essays
                         </a>
                     </li>
                     <li className={`buy-token ${navbar? "d-block":"d-none"}`}

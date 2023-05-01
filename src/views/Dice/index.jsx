@@ -14,6 +14,7 @@ import dice3 from "../../assets/images/dice3.svg";
 import dice4 from "../../assets/images/dice4.svg";
 import dice5 from "../../assets/images/dice5.svg";
 import dice6 from "../../assets/images/dice6.svg";
+import gambler from "../../assets/images/gambler.png";
 import "./temp.scss";
 import PageLoaderCircle from "src/components/PageLoaderCircle";
 
@@ -73,32 +74,38 @@ function Dice() {
       <PageLoaderCircle delay={1500} />
 
       <div className="container">
-        <div className="footer-cta-area text-center active-shape hover-shape-inner">
-          <a
-            className="theme-btn d-inline-block wow fadeInUp"
-            href="javascript:void(0)"
-            onClick={roll}
-          >
-            <span>Roll the dice</span>
-            <div className="hover-shape1"></div>
-            <div className="hover-shape2"></div>
-            <div className="hover-shape3"></div>
-          </a>
-          <div className="dice-area">
-            <img src={dice1} alt="Dice" ref={user1} />
+        <div class="row justify-content-md-center">
+          <div class="col col-lg-8">
+            <h1>The Gambler</h1>
+            <p class="leftjustify">"Welcome to the cryptocarnival. You are probably a precarious worker, indebted, uncertain about the future, playing your odds on the crypto dice, exhausted by social networking and working multiple jobs. In your pocket, <a href="/faucet">one remaining token</a> needs to be spent, before you exit the precinct and head home."</p> 
+            <p class="leftjustify">Continue reading <a href="/comingsoon">The Gambler</a>, or try your luck at a game of crypto dice to accompany the essay.</p>
+            <div className="footer-cta-area text-center active-shape hover-shape-inner">
+            <img src={gambler} alt="img" className="rounded mx-auto d-block" />
+              <a
+                className="theme-btn d-inline-block wow fadeInUp"
+                href="javascript:void(0)"
+                onClick={roll}
+              >
+                <span>Roll the dice</span>
+                <div className="hover-shape1"></div>
+                <div className="hover-shape2"></div>
+                <div className="hover-shape3"></div>
+              </a>
+              <div className="dice-area">
+                <img src={dice1} alt="Dice" ref={user1} />
+              </div>
+              <h3 className="result" ref={resultDice}>
+                {result}
+              </h3>
+              <h4>Sorry, dice doesn't work on some mobile wallets ¯\_(ツ)_/¯</h4>
+            </div>
           </div>
-          <h3 className="result" ref={resultDice}>
-            {result}
-          </h3>
-          {/* <h4>Sorry, dice not working on mobile ¯\_(ツ)_/¯</h4> */}
         </div>
+
       </div>
 
-      {/* <div className="how_to_participate_sect">
-                <div className="moon_img_bg">
-                    <img src={image13} alt="img" className="img-fluid" />
-                </div>
-            </div> */}
+
+
       <div className="gamfi-footer-section">
         <div className="container">
           <div className="footer-cta-area text-center active-shape hover-shape-inner">

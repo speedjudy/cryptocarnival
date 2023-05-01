@@ -1,30 +1,12 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useMediaQuery } from "usehooks-ts";
-
-import image1 from "../../assets/images/homeV3/joker.png";
 import image2 from "../../assets/images/icons/steps.png";
-import image3 from "../../assets/images/icons/BlockChain1.png";
-import image4 from "../../assets/images/icons/BlockChain6.png";
-import image5 from "../../assets/images/icons/BlockChain3.png";
-import image6 from "../../assets/images/icons/BlockChain4.png";
-import image7 from "../../assets/images/icons/BlockChain5.png";
-import image8 from "../../assets/images/icons/BlockChain2.png";
-import image9 from "../../assets/images/icons/BlockChain2.png";
-import image10 from "../../assets/images/icons/One.svg";
-import image11 from "../../assets/images/icons/two.svg";
-import image12 from "../../assets/images/icons/three.svg";
-import image13 from "../../assets/images/icons/earthBg.svg";
-import image14 from "../../assets/images/icons/plus.svg";
-import image15 from "../../assets/images/icons/munis.svg";
 import image16 from "../../assets/images/icons/steps2.png";
 import image17 from "../../assets/images/icons/galaxy_image.png";
 import image18 from "../../assets/images/logo.png";
 import crowImage from "../../assets/Crow.jpg";
-
 import { useWeb3Context } from "../../hooks";
-
 import { claimNFT } from "../../slices/StakeThunk";
-
 import "./temp.scss";
 import PageLoaderCircle from "src/components/PageLoaderCircle";
 
@@ -82,28 +64,25 @@ function Faucet() {
                         }}
                       >
                         <h2 className="title mb-15">
-                          AIRDROP OF
+                          CROW QUEEN
                           <br />
-                          NFTS
+                          NFT
                         </h2>
-                        <p
-                          className="dsc mb-40 "
-                          style={{ paddingLeft: "10px", paddingRight: "10px" }}
-                        >
-                          Drops are limited to 1 token per 24 hours. You must{" "}
-                          <a href="https://support.avax.network/en/articles/4626956-how-do-i-set-up-metamask-on-avalanche">
-                            switch
-                          </a>{" "}
-                          to the Avalanche network in your wallet and import our
-                          token from this address:{" "}
+                        <p className="dsc mb-40 leftjustify"
+                          style={{ paddingLeft: "10px", paddingRight: "10px" }}>
+                          The artist Sam Eglin describes the Crow Queen as a "priestess who can communicate with the dead, with the spirits, and with the other world" because the "crow remains a messenger between the world of the living and the world of the dead." But this duality weighs heavy on the Crow Queen, as the artist describes "her expression [is] a little bit lost, eyes in the void, or a little bit between the two worlds." This featured NFT is offered gratis by the artist to accompany their essay <a href="/comingsoon">"Trying to sell the Crow Queen in Web3: On the resistance of video gamers to cryptocurrencies, NFTs and their financial logic."</a> No rights conferred by the minting or transmission of this NFT.
+                        </p>
+
+                        <p className="dsc mb-40 leftjustify"
+                          style={{ paddingLeft: "10px", paddingRight: "10px" }}>  
+                          Drops are limited to 1 NFT per 24 hours. User must pay <a href="https://snowtrace.io/gastracker">gas fees</a>. To view your NFT, you must{" "}<a href="https://support.avax.network/en/articles/4626956-how-do-i-set-up-metamask-on-avalanche"> switch </a>{" "} to the Avalanche network in your wallet and import our contract from this address:{" "}
                           <a href="https://snowtrace.io/address/0x6a35af37ed1be39431ec45606c67957e6bb364be">
                             {isDesktop
                               ? "0x6a35af37ed1be39431ec45606c67957e6bb364be"
                               : makeShortWalletAddress(
                                   "0x6a35af37ed1be39431ec45606c67957e6bb364be"
                                 )}
-                          </a>
-                          .
+                          </a>.
                         </p>
                       </div>
                       {/* <h4>Sorry, faucet not working on mobile ¯\_(ツ)_/¯</h4> */}
@@ -129,7 +108,7 @@ function Faucet() {
                         href="#"
                         onClick={onClaimFaucet}
                       >
-                        <span>REQUEST AN NFT</span>
+                        <span>MINT NFT</span>
                         <div className="hover-shape1"></div>
                         <div className="hover-shape2"></div>
                         <div className="hover-shape3"></div>
@@ -150,11 +129,6 @@ function Faucet() {
         </div>
       </div>
 
-      {/* <div className="how_to_participate_sect">
-                <div className="moon_img_bg">
-                    <img src={image13} alt="img" className="img-fluid" />
-                </div>
-            </div> */}
       <div className="gamfi-footer-section">
         <div className="container">
           <div className="footer-cta-area text-center active-shape hover-shape-inner">
@@ -253,7 +227,7 @@ function Faucet() {
                   <a href="/comingsoon">Read essays</a>
                 </li>
                 <li>
-                  <a href="/contest">Play games</a>
+                  <a href="/dice">Play games</a>
                 </li>
                 <li>
                   <a href="/faucet">Token info</a>

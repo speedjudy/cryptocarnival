@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.58329255.chunk.css",
-    "main.js": "/static/js/main.3122e08c.chunk.js",
-    "main.js.map": "/static/js/main.3122e08c.chunk.js.map",
+    "main.css": "/static/css/main.1f6311e2.chunk.css",
+    "main.js": "/static/js/main.69c1f793.chunk.js",
+    "main.js.map": "/static/js/main.69c1f793.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.e984b6b2.js",
     "runtime-main.js.map": "/static/js/runtime-main.e984b6b2.js.map",
     "static/js/2.d141e824.chunk.js": "/static/js/2.d141e824.chunk.js",
     "static/js/2.d141e824.chunk.js.map": "/static/js/2.d141e824.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.58329255.chunk.css.map": "/static/css/main.58329255.chunk.css.map",
+    "static/css/main.1f6311e2.chunk.css.map": "/static/css/main.1f6311e2.chunk.css.map",
     "static/js/2.d141e824.chunk.js.LICENSE.txt": "/static/js/2.d141e824.chunk.js.LICENSE.txt",
     "static/media/Crow.e0e1b92d.jpg": "/static/media/Crow.e0e1b92d.jpg",
     "static/media/EuclidSquare-Bold.22d0be7b.woff": "/static/media/EuclidSquare-Bold.22d0be7b.woff",
@@ -34,6 +34,7 @@
     "static/media/dice6.dce2b82c.svg": "/static/media/dice6.dce2b82c.svg",
     "static/media/earthBg.581f84d1.svg": "/static/media/earthBg.581f84d1.svg",
     "static/media/galaxy_image.3de4f26e.png": "/static/media/galaxy_image.3de4f26e.png",
+    "static/media/gambler.e46c37de.png": "/static/media/gambler.e46c37de.png",
     "static/media/hamburger.01f8f3fa.svg": "/static/media/hamburger.01f8f3fa.svg",
     "static/media/index-V1.4bb7a6df.png": "/static/media/index-V1.4bb7a6df.png",
     "static/media/index-V2.2d1bbdd4.png": "/static/media/index-V2.2d1bbdd4.png",
@@ -47,13 +48,13 @@
     "static/media/sms-notification.620acd22.svg": "/static/media/sms-notification.620acd22.svg",
     "static/media/three.ae4608b7.svg": "/static/media/three.ae4608b7.svg",
     "static/media/two.39205970.svg": "/static/media/two.39205970.svg",
-    "static/media/underconstruction.e2df5666.png": "/static/media/underconstruction.e2df5666.png",
+    "static/media/underconstruction.b2553bde.png": "/static/media/underconstruction.b2553bde.png",
     "static/media/wETH.eac542b1.svg": "/static/media/wETH.eac542b1.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.e984b6b2.js",
     "static/js/2.d141e824.chunk.js",
-    "static/css/main.58329255.chunk.css",
-    "static/js/main.3122e08c.chunk.js"
+    "static/css/main.1f6311e2.chunk.css",
+    "static/js/main.69c1f793.chunk.js"
   ]
 }
