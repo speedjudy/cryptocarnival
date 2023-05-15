@@ -8,6 +8,64 @@
 .project_pools_v3{
     padding-top:10px;
 }
+html{
+    overflow-y: scroll !important;
+}
+body{
+    overflow-y: scroll !important;
+}
+.tldr{
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    font-style: italic;
+}
+p{
+    font-size: 1.5em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    padding-right: 2%;
+    margin-bottom: .5em;
+    line-height: normal;
+}
+ul.content{
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 10px;
+    margin-left: 10px;
+    list-style-type: disc;
+}
+ul.content li{
+    font-size: 1.5em;
+    line-height: 1.1em;
+}
 li.list4{
     padding-right: 10px;
+}
+
+h1 {
+    padding-top: 0.5em;
+}
+h2 {
+    padding-top: 0.5em;
+}
+code{
+    font-size: medium;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    line-height: normal;
+}
+.figure{
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+.displayquotation{
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }

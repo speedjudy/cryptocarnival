@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.1f6311e2.chunk.css",
-    "main.js": "/static/js/main.69c1f793.chunk.js",
-    "main.js.map": "/static/js/main.69c1f793.chunk.js.map",
+    "main.css": "/static/css/main.32977079.chunk.css",
+    "main.js": "/static/js/main.c6141f1a.chunk.js",
+    "main.js.map": "/static/js/main.c6141f1a.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.e984b6b2.js",
     "runtime-main.js.map": "/static/js/runtime-main.e984b6b2.js.map",
     "static/js/2.d141e824.chunk.js": "/static/js/2.d141e824.chunk.js",
     "static/js/2.d141e824.chunk.js.map": "/static/js/2.d141e824.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.1f6311e2.chunk.css.map": "/static/css/main.1f6311e2.chunk.css.map",
+    "static/css/main.32977079.chunk.css.map": "/static/css/main.32977079.chunk.css.map",
     "static/js/2.d141e824.chunk.js.LICENSE.txt": "/static/js/2.d141e824.chunk.js.LICENSE.txt",
     "static/media/Crow.e0e1b92d.jpg": "/static/media/Crow.e0e1b92d.jpg",
     "static/media/EuclidSquare-Bold.22d0be7b.woff": "/static/media/EuclidSquare-Bold.22d0be7b.woff",
@@ -43,6 +43,7 @@
     "static/media/logo-dark.e84f1b91.png": "/static/media/logo-dark.e84f1b91.png",
     "static/media/logo.1ba43873.png": "/static/media/logo.1ba43873.png",
     "static/media/logo.5e02a71f.png": "/static/media/logo.5e02a71f.png",
+    "static/media/moloch.0eccfb85.png": "/static/media/moloch.0eccfb85.png",
     "static/media/munis.fe35eeb3.svg": "/static/media/munis.fe35eeb3.svg",
     "static/media/plus.3cc274e0.svg": "/static/media/plus.3cc274e0.svg",
     "static/media/sms-notification.620acd22.svg": "/static/media/sms-notification.620acd22.svg",
@@ -54,7 +55,7 @@
   "entrypoints": [
     "static/js/runtime-main.e984b6b2.js",
     "static/js/2.d141e824.chunk.js",
-    "static/css/main.1f6311e2.chunk.css",
-    "static/js/main.69c1f793.chunk.js"
+    "static/css/main.32977079.chunk.css",
+    "static/js/main.c6141f1a.chunk.js"
   ]
 }
